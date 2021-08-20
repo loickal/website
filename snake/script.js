@@ -1,5 +1,9 @@
 "use strict";
 console.clear();
+
+/**
+ * Declearing of the gamesstates
+ */
 var GAME_STATES;
 (function (GAME_STATES) {
     GAME_STATES["ready"] = "READY";
@@ -7,6 +11,10 @@ var GAME_STATES;
     GAME_STATES["ended"] = "ENDED";
     GAME_STATES["paused"] = "PAUSED";
 })(GAME_STATES || (GAME_STATES = {}));
+
+/**
+ * Declearing of the sounds
+ */
 var SOUND;
 (function (SOUND) {
     SOUND["move"] = "move";
@@ -14,6 +22,10 @@ var SOUND;
     SOUND["collect"] = "collect";
     SOUND["start"] = "start";
 })(SOUND || (SOUND = {}));
+
+/**
+ * Basic app setup
+ */
 class App {
     constructor() {
         this.setupUI();
@@ -43,6 +55,9 @@ class App {
         }
     }
 }
+/**
+ * Complete game mechanics
+ */
 class Snake {
     constructor(boardElement) {
         this.SETTINGS = {
@@ -141,20 +156,20 @@ class Snake {
         this.keyPress = Rx.Observable.fromEvent(document, "keydown")
             .filter((e) => ['arrowright', 'arrowleft', 'arrowup', 'arrowdown', 'w', 'a', 's', 'd'].indexOf(e.key.toLowerCase()) >= 0)
             .map((e) => {
-            e.preventDefault();
-            if(e.key == 'w'){
-                return 'up';
-            }else if(e.key == 'a'){
-                return 'left';
-            }else if(e.key == 's'){
-                return 'down';
-            }else if(e.key == 'd'){
-                return 'right';
-            }else{
-                return e.key.toLowerCase().replace('arrow', '');
-            }
-        });
-        
+                e.preventDefault();
+                if (e.key == 'w') {
+                    return 'up';
+                } else if (e.key == 'a') {
+                    return 'left';
+                } else if (e.key == 's') {
+                    return 'down';
+                } else if (e.key == 'd') {
+                    return 'right';
+                } else {
+                    return e.key.toLowerCase().replace('arrow', '');
+                }
+            });
+
         let onEnter = Rx.Observable.fromEvent(document, "keydown")
             .filter((e) => ['enter'].indexOf(e.key.toLowerCase()) >= 0);
 
@@ -384,4 +399,8 @@ class Input {
         this.ends = this.mouseUps.merge(this.touchEnds);
     }
 }
+
+/**
+ * Creating a new instance of the app to start the UI
+ */
 let app = new App();
