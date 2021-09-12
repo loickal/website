@@ -37,31 +37,34 @@ fetch("changelog.json")
             //Main body for the changes
             var changesbodydiv = createDiv("changes-body", wrapperDiv)
 
-            //Features row
-            var changesWrapperDiv = createDiv("changes-row features", changesbodydiv)
+            if (changelogObject["feature"] != null) {
+                //Features row
+                var changesWrapperDiv = createDiv("changes-row features", changesbodydiv)
 
-            var headerContent = `<span class="icon">
+                var headerContent = `<span class="icon">
             <i>add_circle</i>
             </span>
             <h3>Features</h3>`
 
-            createDivWithContent("changes-row-header", changesWrapperDiv, headerContent)
+                createDivWithContent("changes-row-header", changesWrapperDiv, headerContent)
 
-            var featuresDiv = createDiv("changes-row-body", changesWrapperDiv)
+                var featuresDiv = createDiv("changes-row-body", changesWrapperDiv)
 
-            var ulElement = createElement("", featuresDiv, "ul")
+                var ulElement = createElement("", featuresDiv, "ul")
 
-            for (var featureElement in changelogObject["feature"]) {
-                var changelogText = changelogObject["feature"][featureElement]
-                var content = `<span>•</span>
+                for (var featureElement in changelogObject["feature"]) {
+                    var changelogText = changelogObject["feature"][featureElement]
+                    var content = `<span>•</span>
                 <div class="entry">` + changelogText + `
                     </div>
                     `
-                createElementWithContent("", ulElement, "li", content)
+                    createElementWithContent("", ulElement, "li", content)
+                }
             }
 
+
             //Fixed row
-            if (changelogObject["fixed"] != 0) {
+            if (changelogObject["fixed"] != null) {
                 var changesWrapperDiv = createDiv("changes-row fixed", changesbodydiv)
                 var headerContent = `<span class="icon">
             <i>handyman</i>
@@ -83,15 +86,14 @@ fetch("changelog.json")
                 }
             }
 
-            //Removed row
-            if (changelogObject["removed"] != 0) {
+            if (changelogObject["removed"] != null) {
                 var changesWrapperDiv = createDiv("changes-row removed", changesbodydiv)
 
 
                 var headerContent = `<span class="icon">
-            <i>remove_circle</i>
-            </span>
-            <h3>Removed</h3>`
+                <i>remove_circle</i>
+                </span>
+                <h3>Removed</h3>`
                 createDivWithContent("changes-row-header", changesWrapperDiv, headerContent)
 
                 var featuresDiv = createDiv("changes-row-body", changesWrapperDiv)
@@ -101,36 +103,41 @@ fetch("changelog.json")
                 for (var featureElement in changelogObject["removed"]) {
                     var changelogText = changelogObject["removed"][featureElement]
                     var content = `<span>•</span>
-                <div class="entry">` + changelogText + `
-                    </div>
-                    `
+                    <div class="entry">` + changelogText + `
+                        </div>
+                        `
                     createElementWithContent("", ulElement, "li", content)
                 }
             }
 
-            //Improved row
-            var changesWrapperDiv = createDiv("changes-row improvements", changesbodydiv)
+
+            if (changelogObject["improved"] != null) {
+                //Improved row
+                var changesWrapperDiv = createDiv("changes-row improvements", changesbodydiv)
 
 
-            var headerContent = `<span class="icon">
+                var headerContent = `<span class="icon">
                         <i>arrow_circle_up</i>
                         </span>
                         <h3>Improvements</h3>`
-            createDivWithContent("changes-row-header", changesWrapperDiv, headerContent)
+                createDivWithContent("changes-row-header", changesWrapperDiv, headerContent)
 
-            var featuresDiv = createDiv("changes-row-body", changesWrapperDiv)
+                var featuresDiv = createDiv("changes-row-body", changesWrapperDiv)
 
-            var ulElement = createElement("", featuresDiv, "ul")
+                var ulElement = createElement("", featuresDiv, "ul")
 
-            for (var featureElement in changelogObject["improved"]) {
-                var changelogText = changelogObject["improved"][featureElement]
-                var content = `<span>•</span>
+                for (var featureElement in changelogObject["improved"]) {
+                    var changelogText = changelogObject["improved"][featureElement]
+                    var content = `<span>•</span>
                             <div class="entry">` + changelogText + `
                                 </div>`
-                createElementWithContent("", ulElement, "li", content)
-            }
+                    createElementWithContent("", ulElement, "li", content)
+                }
 
+            }
         }
+
+
         console.log("Successfully fetched all changelogs")
     })
 
