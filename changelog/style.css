@@ -62,14 +62,6 @@
     padding: 3rem 0;
 }
 
-.title {
-    font-family: "Bebas Neue", sans-serif;
-}
-
-.subtitle {
-    font-family: "Open Sans", sans-serif;
-}
-
 .section.is-changes {
     background-color: #1b1b1b;
     padding: 4rem 0;
@@ -339,7 +331,6 @@
 html {
     background-color: beige;
     color: var(--dark-gray-color);
-    font-family: "Open Sans", sans-serif;
 }
 
 html,
@@ -367,10 +358,6 @@ h4,
 h5 {
     font-weight: 500;
     color: #e4dad1;
-}
-
-p {
-    font-family: "Open Sans", sans-serif;
 }
 
 a {
@@ -426,5 +413,4 @@ span.tag {
 
 .subtitle {
     color: whitesmoke;
-    font-family: "Open Sans", sans-serif;
 }
