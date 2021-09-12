@@ -6,6 +6,7 @@
     <meta name="description" content="Changelog of the PoloCloud Minecraft Cloud">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>PoloCloud - Alpha | Cloud of the future</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="/assets/css/scribbler-global.css">
     <link rel="stylesheet" href="/assets/modules/preloader/preloader.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -49,11 +50,9 @@
                 <li class="menu__item"><a href="/index.html" class="link link--dark"><i class="fa fa-home"></i>
                         Home</a>
                 </li>
-                <li class="menu__item"><a href="https://github.com/PoloCloud-official/cloudsystem/wiki" target="_blank"
-                        class="link link--dark"><i class="fa fa-book"></i> Wiki</a>
+                <li class="menu__item"><a href="https://github.com/PoloCloud-official/cloudsystem/wiki" target="_blank" class="link link--dark"><i class="fa fa-book"></i> Wiki</a>
                 </li>
-                <li class="menu__item"><a href="https://github.com/PoloCloud-official/" target="_blank"
-                        class="link link--dark"><i class="fa fa-github"></i> Github</a></li>
+                <li class="menu__item"><a href="https://github.com/PoloCloud-official/" target="_blank" class="link link--dark"><i class="fa fa-github"></i> Github</a></li>
                 <li class="menu__item">
                     <div class="theme-switch-wrapper">
                         <label class="theme-switch" for="checkbox">
@@ -68,25 +67,29 @@
 
         <!--Shell Terminal for Changelog animation-->
         <div class="hero">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
             <h1 class="hero__title">Changelog</h1>
             <p class="hero__description">Explore the newest things and features of the cloud!</p>
         </div>
-        <div class="hero__terminal">
-            <pre>
-                <code class="shell-session demo">HttpMarco ~ $ </code>
-            </pre>
-        </div>
-        <div class="wrapper">
+        <div class="section is-medium bckdw page-changelist">
+            <div class="container">
+
+            </div>
         </div>
         <!--/Shell Terminal for Changelog animation-->
 
+
         <!--Static Footer-->
         <footer class="footer"><a href="/snake" target="_blank" class="thing..">©</a>opyright
-            <script>document.write(new Date().getFullYear())</script> <a href="https://github.com/PoloCloud-official"
-                target="_blank" class="link link--light">PoloCloud</a>.
-            <p>Proudly powered from the <a href="https://github.com/amiechen/codrops-scribbler"
-                    target="_blank">Scribbler</a>
-                Template</p>
+            <script>
+                document.write(new Date().getFullYear())
+            </script> <a href="https://github.com/PoloCloud-official" target="_blank" class="link link--light">PoloCloud</a>.
+            <p>Proudly powered from the <a href="https://github.com/amiechen/codrops-scribbler" target="_blank">Scribbler</a> Template
+            </p>
         </footer>
         <!--/Static Footer-->
     </div>
@@ -96,18 +99,11 @@
     <script src="/assets/js/scribbler.js"></script>
     <script src="/assets/js/darkmode.js"></script>
     <script src="/assets/modules/cookie/cookie.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-
-    <!--Loading the newest changelog from the changelog.txt file-->
+    <script src="jsonFetcher.js" defer></script>
     <script>
-        const fileUrl = 'changelog.txt';
-
-        fetch(fileUrl)
-            .then(r => r.text())
-            .then(t => writeDemo("java -jar bootstrap.jar changelog\nPoloCloud (Since 2021)\nLoading changelog...\n" + t, 25, 55))
-
+        hljs.initHighlightingOnLoad();
     </script>
-    <!--/Scripts-->
+
 </body>
 
 </html>

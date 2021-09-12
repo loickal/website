@@ -1,0 +1,430 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+.container {
+    flex-grow: 1;
+    margin: 0 auto;
+    position: relative;
+    width: auto;
+}
+
+.container.is-fluid {
+    max-width: none;
+    padding-left: 32px;
+    padding-right: 32px;
+    width: 100%;
+}
+
+@media screen and (min-width:1000px) {
+    .container {
+        max-width: 936px;
+    }
+}
+
+@media screen and (max-width:999px) {
+    .container.is-widescreen {
+        max-width: 936px;
+    }
+}
+
+@media screen and (max-width:999px) {
+    .container.is-fullhd {
+        max-width: 936px;
+    }
+}
+
+@media screen and (min-width:1000px) {
+    .container {
+        max-width: 936px;
+    }
+}
+
+@media screen and (min-width:1000px) {
+    .container {
+        max-width: 936px;
+    }
+}
+
+.fixed-background-media {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: -10;
+    opacity: .4;
+}
+
+.section.rss-feed {
+    padding: 3rem 0;
+}
+
+.title {
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.subtitle {
+    font-family: "Open Sans", sans-serif;
+}
+
+.section.is-changes {
+    background-color: #1b1b1b;
+    padding: 4rem 0;
+}
+
+@media screen and (max-width:849px) {
+    .section.is-changes {
+        padding: 4rem 2rem;
+    }
+}
+
+.section.page-changelist .pagination {
+    margin-top: 0;
+    margin-bottom: 3rem;
+}
+
+.section.changelist-single {
+    padding: calc(8rem + 120px) 0 5rem 0;
+}
+
+@media screen and (max-width:849px) {
+    .section.changelist-single {
+        padding: calc(4rem + 120px) 0 5rem 0;
+    }
+}
+
+.changes-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 4rem;
+    padding-bottom: 4rem;
+    border-bottom: 2px solid rgba(228, 218, 209, .1);
+}
+
+.changes-container:last-of-type {
+    border-bottom: 0;
+}
+
+@media screen and (max-width:849px) {
+    .changes-container {
+        flex-direction: column;
+        padding: 2rem;
+    }
+}
+
+.changes-container .changes-sidebar {
+    width: 300px;
+    min-width: 300px;
+    padding-right: 2rem;
+    align-self: flex-start;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 2rem;
+}
+
+@media screen and (max-width:849px) {
+    .changes-container .changes-sidebar {
+        min-width: auto;
+        width: 100%;
+        position: relative;
+        top: auto;
+    }
+}
+
+.changes-container .changes-sidebar .sidebar-section {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid rgba(228, 218, 209, .1);
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.changes-container .changes-sidebar .sidebar-section:last-of-type {
+    border-bottom: 0;
+}
+
+.changes-container .changes-sidebar .sidebar-section .subtitle {
+    opacity: .6;
+}
+
+.changes-container .changes-sidebar .sidebar-section .title {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+.changes-container .changes-sidebar .sidebar-section .title.not-published {
+    color: #cd412b;
+    margin-bottom: .25rem;
+}
+
+.changes-container .changes-sidebar .sidebar-section .title .icon {
+    margin-right: .5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    top: 2px;
+    position: relative;
+}
+
+.changes-container .changes-sidebar .sidebar-section .not-published-text {
+    color: rgba(228, 218, 209, .5);
+    font-size: 14px;
+}
+
+.changes-container .changes-sidebar .sidebar-section .date {
+    color: #e4dad1;
+    display: flex;
+    align-items: center;
+}
+
+.changes-container .changes-sidebar .sidebar-section .date .icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+    opacity: .5;
+}
+
+.changes-container .changes-body {
+    flex-grow: 1;
+}
+
+.changes-container .changes-body .changes-row {
+    margin-bottom: 2rem;
+}
+
+.changes-container .changes-body .changes-row.features .changes-row-header {
+    background: linear-gradient(to right, rgba(93, 114, 57, .4), rgba(93, 114, 57, 0));
+    color: #8ec62f;
+}
+
+.changes-container .changes-body .changes-row.fixed .changes-row-header {
+    background: linear-gradient(to right, rgba(80, 147, 197, .4), rgba(80, 147, 197, 0));
+    color: #65b6ed;
+}
+
+.changes-container .changes-body .changes-row.improvements .changes-row-header {
+    background: linear-gradient(to right, rgba(215, 170, 12, .4), rgba(215, 170, 12, 0));
+    color: #f5d254;
+}
+
+.changes-container .changes-body .changes-row.known-issues .changes-row-header {
+    background: linear-gradient(to right, rgba(215, 132, 34, .4), rgba(215, 132, 34, 0));
+    color: #e9b476;
+}
+
+.changes-container .changes-body .changes-row.removed .changes-row-header {
+    background: linear-gradient(to right, rgba(199, 42, 42, .4), rgba(199, 42, 42, 0));
+    color: #e27575;
+}
+
+.changes-container .changes-body .changes-row:last-of-type {
+    margin-bottom: 0;
+}
+
+.changes-container .changes-body .changes-row .changes-row-header {
+    color: #e4dad1;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    padding: 1rem 1.5rem;
+    margin: 0;
+}
+
+.changes-container .changes-body .changes-row .changes-row-header .icon {
+    color: inherit;
+    margin-right: .5rem;
+    font-size: 21px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.changes-container .changes-body .changes-row .changes-row-header h3 {
+    color: inherit;
+    padding: 0;
+    margin: 2px 0 0 0;
+    font-size: 21px;
+}
+
+.changes-container .changes-body .changes-row .changes-row-body ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.changes-container .changes-body .changes-row .changes-row-body ul li {
+    background: rgba(0, 0, 0, .1);
+    display: flex;
+    flex-direction: row;
+    background-color: gray;
+    padding: .5rem 1.5rem;
+}
+
+.changes-container .changes-body .changes-row .changes-row-body ul li:nth-of-type(even) {
+    background: rgba(0, 0, 0, .1);
+    background-color: darkgray;
+}
+
+.changes-container .changes-body .changes-row .changes-row-body ul li span {
+    margin-right: .75rem;
+}
+
+.bckdw {
+    background-color: var(--dark-gray-color);
+}
+
+.section {
+    position: relative;
+}
+
+.section.is-small {
+    padding: 3rem 0;
+}
+
+@media screen and (max-width:849px) {
+    .section.is-small {
+        padding: 2rem 2rem;
+    }
+}
+
+.section.is-medium {
+    padding: 5rem 0;
+}
+
+@media screen and (max-width:849px) {
+    .section.is-medium {
+        padding: 3rem 2rem;
+    }
+}
+
+.section.is-large {
+    padding: 8rem 0;
+}
+
+@media screen and (max-width:849px) {
+    .section.is-large {
+        padding: 5rem 2rem;
+    }
+}
+
+.section.bg-light,
+.section.bg-light .dark-bar-pattern {
+    background-color: #1f1f1f;
+}
+
+.section.bg-medium,
+.section.bg-medium .dark-bar-pattern {
+    background-color: #1b1b1b;
+}
+
+.section.bg-default,
+.section.bg-default .dark-bar-pattern {
+    background-color: #141312;
+}
+
+.section.bg-dark,
+.section.bg-dark .dark-bar-pattern {
+    background-color: #0c0b0b;
+}
+
+.section.large {
+    padding: 5rem 0;
+}
+
+html {
+    background-color: beige;
+    color: var(--dark-gray-color);
+    font-family: "Open Sans", sans-serif;
+}
+
+html,
+body {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-size: 16px;
+    margin: 0;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-weight: 500;
+    color: #e4dad1;
+}
+
+p {
+    font-family: "Open Sans", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.icon i,
+a i {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    font-feature-settings: 'liga';
+}
+
+.container {
+    max-width: 1100px;
+    width: 100%;
+}
+
+.background-media {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 110%;
+    height: 110%;
+    object-fit: cover;
+    object-position: center;
+    z-index: -10;
+    opacity: .2;
+    filter: blur(10px);
+}
+
+span.tag {
+    display: inline-block;
+    background-color: #fff;
+    color: #fff;
+    padding: 2px 4px;
+    font-size: 10px;
+    text-transform: uppercase;
+    margin: 0 3px;
+    border-radius: 4px;
+}
+
+.subtitle {
+    color: whitesmoke;
+    font-family: "Open Sans", sans-serif;
+}
