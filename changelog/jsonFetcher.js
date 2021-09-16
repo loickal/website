@@ -33,6 +33,20 @@ fetch("changelog.json")
             </span>` + changelogObject["type"] + `</p>
             </div>`
 
+            if (changelogObject["download"] != null) {
+                console.log("Checking download file...")
+                var filename = "data/downloads/" + changelogObject["download"];
+                if (filexExits(filename)) {
+                    sideBarEntryContent = sideBarEntryContent + `<div class="sidebar-section">
+                    <span class="subtitle">Download</span>
+                    <p class="title">            
+                    <span class="icon">
+                    <i>cloud_download</i>
+                    </span><a href="` + filename + `">Click here!</a></p>
+                    </div>`
+                }
+            }
+
             if (changelogObject["date"] != null) {
                 sideBarEntryContent = sideBarEntryContent + `<div class="sidebar-section">
                 <span class="subtitle">Date</span>
@@ -49,7 +63,7 @@ fetch("changelog.json")
                 <p class="title">            
                 <span class="icon">
                 <i>announcement</i>
-                </span>` + changelogObject["date"] + `</p>
+                </span>` + changelogObject["comment"] + `</p>
                 </div>`
             }
 
@@ -200,4 +214,16 @@ function createElementWithContent(name, wrapperDiv, elementType, content) {
     createdElement.innerHTML = content
     wrapperDiv.appendChild(createdElement)
     return createdElement
+}
+
+function filexExits(urlToFile) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('HEAD', urlToFile, false);
+    xhr.send();
+
+    if (xhr.status == "404") {
+        return false;
+    } else {
+        return true;
+    }
 }

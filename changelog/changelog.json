@@ -2,8 +2,7 @@
     "changelogs": [{
             "build": "0.3 Build 452",
             "type": "changelog",
-            "date": "123",
-            "comment": "ad",
+            "download": "adadwa.zip",
             "improved": [
                 "Improved player mechanics",
                 "Improved build mechanics"
