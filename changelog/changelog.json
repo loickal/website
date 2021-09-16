@@ -2,10 +2,8 @@
     "changelogs": [{
             "build": "0.3 Build 452",
             "type": "changelog",
-            "removed": [
-                "Removed player mechanics",
-                "Removed build mechanics"
-            ],
+            "date": "123",
+            "comment": "ad",
             "improved": [
                 "Improved player mechanics",
                 "Improved build mechanics"
@@ -13,10 +11,6 @@
             "fixed": [
                 "Fixed player mechanicsisdgfizsdgfisdgizsdhfiushfouazfouasdzouasdzouasdzu9azua9sdz",
                 "Fixed build mechanics"
-            ],
-            "feature": [
-                "Feature player mechanics",
-                "Feature build mechanics"
             ]
         },
         {

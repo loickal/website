@@ -22,14 +22,40 @@ fetch("changelog.json")
             //Creating the sidebar of the changelog entry
             var sideBarEntryContent = `<div class="sidebar-section">
             <span class="subtitle">Build</span>
-            <p class="title">` + changelogObject["build"] + `</p>
+            <p class="title"> <span class="icon">
+            <i>published_with_changes</i>
+            </span>` + changelogObject["build"] + `</p>
             </div>
             <div class="sidebar-section">
-            <div class="subtitle">Type</span>
-            <p class="title">` + changelogObject["type"] + `</p>
-            </div>
-            </div>
-            <div class="sidebar-section"></div>`
+            <span class="subtitle">Type</span>
+            <p class="title"><span class="icon">
+            <i>auto_awesome</i>
+            </span>` + changelogObject["type"] + `</p>
+            </div>`
+
+            if (changelogObject["date"] != null) {
+                sideBarEntryContent = sideBarEntryContent + `<div class="sidebar-section">
+                <span class="subtitle">Date</span>
+                <p class="title">            
+                <span class="icon">
+                <i>date_range</i>
+                </span>` + changelogObject["date"] + `</p>
+                </div>`
+            }
+
+            if (changelogObject["comment"] != null) {
+                sideBarEntryContent = sideBarEntryContent + `<div class="sidebar-section">
+                <span class="subtitle">Comment</span>
+                <p class="title">            
+                <span class="icon">
+                <i>announcement</i>
+                </span>` + changelogObject["date"] + `</p>
+                </div>`
+            }
+
+            sideBarEntryContent = sideBarEntryContent +
+                `</div> 
+                <div class = "sidebar-section"></div>`
 
             createDivWithContent("changes-sidebar", wrapperDiv, sideBarEntryContent)
 
