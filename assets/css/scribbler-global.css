@@ -207,6 +207,11 @@ nav {
     display: grid;
     grid-template-columns: 70px auto;
     background-color: var(--dark-gray-color);
+    opacity: 0.95;
+    z-index: 50;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 .menu {
