@@ -111,6 +111,7 @@
 .changes-container .changes-sidebar {
     width: 300px;
     min-width: 300px;
+    padding-top: 20px;
     padding-right: 2rem;
     align-self: flex-start;
     position: -webkit-sticky;
