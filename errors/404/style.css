@@ -38,7 +38,7 @@ svg {
 }
 
 .btn.green {
-    border: 4px solid #2ccf6d;
+    border: 4px solid var(--accent-color);
     ;
     color: #0e0620;
 }
@@ -50,15 +50,14 @@ svg {
     top: 0;
     width: 0%;
     height: 100%;
-    background: #2ccf6d;
-    ;
+    background: var(--medium-gray-color);
     z-index: -1;
     transition: 0.2s ease;
 }
 
 .btn.green:hover {
     color: #fff;
-    background: #2ccf6d;
+    background: var(--medium-gray-color);
     transition: 0.2s ease;
 }
 
