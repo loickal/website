@@ -1,19 +1,56 @@
 {
     "modules": [{
-        "name": "Example-Module",
-        "author": "Max Musterman",
-        "type": "Example-Type",
-        "download-file": "Example-Module.png",
-        "preview-image": "Example.png",
-        "pics": [
-            "Example-Module#1.png",
-            "Example-Module#2.png",
-            "Example-Module#3.png"
-        ],
-        "short-description": "A example module",
-        "description": [
-            "Exmple#1",
-            "Example#2"
-        ]
-    }]
+            "name": "Proxy-Module",
+            "author": "Lystx",
+            "type": "Proxy-Module",
+            "download-file": "Proxy-Module.jar",
+            "preview-image": "Proxy.png",
+            "pics": [
+                "Proxy1.png",
+                "Proxy2.png",
+                "Proxy3.png"
+            ],
+            "short-description": "Module which can manage proxy features",
+            "description": [
+                "Adds a animated Tablist",
+                "MOTD System (Maintenance MOTD, Normal MOTD, Random MOTD)",
+                "Notify System, notfies players with a specific permission, when a service is beeing prepared, started, stopped",
+                "Fully customizable with placeholders in the configs"
+            ]
+        },
+        {
+            "name": "Sign-Module",
+            "author": "iPommes",
+            "type": "Spigot-Module",
+            "download-file": "Sign-Module.jar",
+            "preview-image": "Sign.png",
+            "pics": [
+                "Sign1.png",
+                "Sign2.png",
+                "Sign3.png",
+                "Sign4.png"
+            ],
+            "short-description": "Adds Signs ingame to join a server",
+            "description": [
+                "Animated Layouts",
+                "Block behind Signs is customizable",
+                "Updates automaticly, also between servers"
+            ]
+        },
+        {
+            "name": "NPC-Module",
+            "author": "iPommes",
+            "type": "Spigot-Module",
+            "download-file": "NPC-Module.jar",
+            "preview-image": "NPC.png",
+            "pics": [],
+            "short-description": "Adds NPC ingame to join a server",
+            "description": [
+                "Entity or NPC",
+                "Customizable Entitytype",
+                "NPC-Skin customizable",
+                "NPC 'Item in Hand' customizable"
+            ]
+        }
+    ]
 }

@@ -37,12 +37,12 @@
          }
 
          //Generate the pictures
-         var generatedPictures = `<p>Linked pictures:<br></p>`;
+         var generatedPictures = ``;
          for (var tempObject in selectedModule["pics"]) {
              var pictureName = "./data/img/" + selectedModule["pics"][tempObject];
 
              fileExists(pictureName, new function() {
-                 generatedPictures = generatedPictures + `<img src="` + pictureName + `" class="lightbox-thumbnail">`
+                 generatedPictures = generatedPictures + `<img src="` + pictureName + `" class="lightbox-thumbnail"><br>`
              });
          }
 

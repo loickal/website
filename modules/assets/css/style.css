@@ -66,6 +66,7 @@
 .section.blog-list .blog-posts-container .blog-post:hover .blog-post-image img {
     box-shadow: 0 5px 15px rgba(0, 0, 0, .2);
     transform: scale(110%);
+    -webkit-transform: scale(1.1, 1.1);
 }
 
 .section.blog-list .blog-posts-container .blog-post:hover .blog-post-body h1 {
@@ -138,12 +139,9 @@ gallery {
 }
 
 gallery>* {
-    max-height: 250px;
-    max-width: 250px;
     object-fit: cover;
     object-position: center;
     flex-grow: 1;
-    margin: 0 !important;
 }
 
 gallery[data-gallery-alignment=top]>* {
