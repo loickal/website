@@ -1,0 +1,19 @@
+{
+    "modules": [{
+        "name": "Example-Module",
+        "author": "Max Musterman",
+        "type": "Example-Type",
+        "download-file": "Example-Module.png",
+        "preview-image": "Example.png",
+        "pics": [
+            "Example-Module#1.png",
+            "Example-Module#2.png",
+            "Example-Module#3.png"
+        ],
+        "short-description": "A example module",
+        "description": [
+            "Exmple#1",
+            "Example#2"
+        ]
+    }]
+}

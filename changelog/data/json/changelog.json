@@ -1,0 +1,93 @@
+{
+    "changelogs": [{
+            "build": "0.3 Build 4",
+            "type": "Build",
+            "download": "0.3 Build 4.zip",
+            "date": "16.09.2021",
+            "comment": "Build with official download",
+            "removed": [
+                "Removed stuff from the master and moved it to the API",
+                "Removed old GameServer INVISIBLE value and moved it to the GameServerStatus ENUM",
+                "Removed old database backend stuff"
+            ],
+            "fixed": [
+                "Fixed 'timed out' error when a player connets with a incopatible version",
+                "Fixed SocketAdresses of the Players",
+                "Fixed wrapper connecting"
+            ],
+            "improved": [
+                "Improved messages",
+                "Improved Master Startupmessage",
+                "Improved syncing of Cloud-Objcets",
+                "Improved request and transfer of a CloudPlayer, not it should be more reliable"
+            ],
+            "feature": [
+                "Added MAINTENANCE and FULL in the GameServerStatus ENUM",
+                "Added 'ignore update' option in the Wrapper",
+                "Added wrapper auto-reconnect if the master was not reachable",
+                "Added fallback PoloCloud-API if the if its not existing and if the downloads fails or is disabled",
+                "Added first Version of the 'SmartProxy'-Module",
+                "Added 'screen' command in the master to lookup the console of a server",
+                "Added the backend of the database support (MySQL, MongoDB)",
+                "Added more comments in the Code"
+            ]
+        }, {
+            "build": "0.3 Build 3",
+            "type": "Build",
+            "removed": [
+                "Removed old logger files",
+                "Removed unused files"
+            ],
+            "feature": [
+                "Added better logger",
+                "Moved logger to the API-Module",
+                "Added Wrapper setup for setting up the basics values of the wrapper on first startup",
+                "Added Master setup for setting up the basics values of the master on first startup"
+            ]
+        },
+        {
+            "build": "0.3 Build 2",
+            "type": "Build",
+            "removed": [
+                "Removed white and unwhitelist methods in the Proxy-Module",
+                "Old method from isDynamic in the Gameserver"
+            ],
+            "improved": [
+                "Improved Modulenames",
+                "Improved Eventnames"
+            ],
+            "fixed": [
+                "Fixed configname in the HubCommand-Module",
+                "Fixed flicker in the Tablist in the Proxy-Module"
+            ],
+            "feature": [
+                "Added animated Tablist of the Proxy-Module",
+                "Added /cloud maintenance <template> to the ingame /cloud Command"
+            ]
+        },
+        {
+            "build": "0.3 Build 1",
+            "type": "Build",
+            "removed": [
+                "Removed old Config-Loader",
+                "Removed old Config-Saver"
+            ],
+            "improved": [
+                "Improved Proxy-Module",
+                "Improved message in the Proxy-Module",
+                "Improved code in the Proxy-Module"
+            ],
+            "fixed": [
+                "Fixed Config-Saver and Config-Loader",
+                "Fixed build mechanics",
+                "Fixed inverted Boolean-Methods"
+            ],
+            "feature": [
+                "Added new Config-Loader",
+                "Added new Config-Save",
+                "Added update() method in the ITemplate for updating the Template-Caches",
+                "Added more comments in the Code"
+            ]
+        }
+    ]
+}

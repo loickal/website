@@ -1,6 +1,6 @@
 console.log("Start fetching changelogs...")
 
-fetch("changelog.json")
+fetch("data/json/changelog.json")
     .then(r => r.text())
     .then(t => {
         var jsonObject = JSON.parse(t)
@@ -36,7 +36,7 @@ fetch("changelog.json")
             if (changelogObject["download"] != null) {
                 console.log("Checking download file...")
                 var filename = "data/downloads/" + changelogObject["download"];
-                if (filexExits(filename)) {
+                if (fileExists(filename)) {
                     sideBarEntryContent = sideBarEntryContent + `<div class="sidebar-section">
                     <span class="subtitle">Download</span>
                     <p class="title">            
@@ -216,12 +216,10 @@ function createElementWithContent(name, wrapperDiv, elementType, content) {
     return createdElement
 }
 
-function filexExits(urlToFile) {
+function fileExists(urlToFile) {
     var xhr = new XMLHttpRequest();
-    xhr.open('HEAD', urlToFile, false);
-    xhr.send();
-
-    if (xhr.status == "404") {
+    xhr.open('HEAD', urlToFile, true);
+    if (xhr.status == 404) {
         return false;
     } else {
         return true;
