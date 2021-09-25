@@ -9,10 +9,6 @@ var getAll = function(selector, scope) {
     return scope.querySelectorAll(selector);
 };
 
-
-
-
-
 function writeDemo(text, maxSpeed, minSpeed) {
     if (document.getElementsByClassName('demo').length > 0) {
         var i = 0;
