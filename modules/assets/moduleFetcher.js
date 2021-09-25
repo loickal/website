@@ -60,12 +60,14 @@
          var completeGeneratedContent = `<h1 editname="Title" type="text">` + selectedModule["name"] + `</h1>
                                         <div class="tags">
                                             <div class="tag secondary">` + selectedModule["author"] + `</div>
-                                            <a href="?category=devblog" class="tag devblog">` + selectedModule["type"] + `</a>
+                                            <a class="tag devblog">` + selectedModule["type"] + `</a>
                                         </div>
                                         <a href="` + generatedDownloadLink + `" class="button is-primary is-large center" style="margin-top: 8px;">
                                         <span>Download ` + selectedModule["name"] + `</span>
                                         </a>
-                                        <p editname="Summary" type="text">` + generatedDescription + `</p>`;
+                                        <p editname="Summary" type="text">` + generatedDescription + `</p>
+                                        <br>
+                                        <p>Wrong module? <a href="/modules/" onmouseover="this.style.color='var(--accent-color)';" onmouseout="this.style.color='';">Go back!</a>`;
 
 
          createDivWithContent("body-info", bodyDiv, completeGeneratedContent)
@@ -75,7 +77,7 @@
 
  function trigger404() {
      var bodyDiv = document.getElementsByClassName("blog-hero-body")[0];
-     var content = `<h1 editname="Title" type="text">This module wasn't found!</h1>`;
+     var content = `<h1 editname="Title" type="text">This module wasn't found! <a href="/modules/" style="color: var(--accent-color)">Go back!</h1>`;
 
      createDivWithContent("body-info", bodyDiv, content)
      document.getElementsByClassName("blog")[0].remove();
