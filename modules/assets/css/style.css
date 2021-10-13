@@ -345,6 +345,10 @@ div.blog .section iframe {
     background-color: rgba(0, 0, 0, .4);
 }
 
+.tag.tag.secondary:hover {
+    background-color: rgba(0, 0, 0, .6);
+}
+
 .tag.devblog {
     background-color: var(--accent-color);
 }
@@ -568,7 +572,7 @@ div.blog .section iframe {
 @keyframes lightbox-hover {
     0% {
         outline-offset: 0;
-        outline: solid 2px rgba(205, 65, 43, .5);
+        outline: solid 2px var(--primary-color);
     }
     80% {
         outline-offset: 4px;
@@ -581,7 +585,7 @@ div.blog .section iframe {
 }
 
 .lightbox-thumbnail:hover {
-    background-color: #cd412b;
+    background-color: var(--primary-color);
     outline: solid 2px rgba(205, 65, 43, 0);
     animation: lightbox-hover 1s ease infinite forwards;
     box-shadow: 0 5px 10px rgba(0, 0, 0, .6);
