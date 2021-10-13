@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css">
     <link rel="stylesheet" href="/assets/css/scribbler-landing.css">
     <link rel="stylesheet" href="/assets/modules/cookie/cookie.css">
+    <link rel="stylesheet" href="assets/css/backToTop.css">
 </head>
 
 <body>
@@ -41,6 +42,7 @@
 
 
     <div class="mainwrapper">
+        <button id="backTopTop"><i class="fas fa-angle-double-up"></i></button>
         <!--Responsive Static Navbar-->
         <nav>
             <a href="/index.html" class="logo"></a>
@@ -106,6 +108,10 @@
     <script src="/assets/js/darkmode.js"></script>
     <script src="/assets/modules/cookie/cookie.js"></script>
     <script src="assets/js/changelogFetcher.js" defer></script>
+    <script src="assets/js/backToTop.js"></script>
+    <script language="javascript">
+        initController(450);
+    </script>
     <script>
         hljs.initHighlightingOnLoad();
     </script>
